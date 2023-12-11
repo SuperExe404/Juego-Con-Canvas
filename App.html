@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto</title>
+  <link rel="stylesheet" href="./App.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="score current-score">
+    Puntuaccion<br><span></span>
+  </div>
+  <div class="score high-score">
+    Record<br><span></span>
+  </div>
+  <button class="trigger left-trigger">tap!</button>
+  <button class="trigger right-trigger">tap!</button>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdn.rawgit.com/schteppe/poly-decomp.js/1ef946f1/build/decomp.min.js'></script>
+<script src='https://cdn.rawgit.com/liabru/matter-js/0895d81f/build/matter.min.js'></script>
+<script src='https://cdn.rawgit.com/liabru/matter-attractors/c470ed42/build/matter-attractors.min.js'></script><script  src="./App.js"></script>
+<canvas id="miCanvas" class="canva"></canvas>
+<script>
+    // Obtén el contexto del canvas
+    var canvas = document.getElementById('miCanvas');
+    var ctx = canvas.getContext('2d');
+  
+    //Ejemplo
+    ctx.fillStyle = '#15aabf'
+    ctx.fillRect(79, 22, 12, 8);
+    ctx.fillRect(129, 22, 12, 8);
+    ctx.fillRect(179.5, 22, 12, 8);
+    ctx.fillRect(67, 84, 12, 24);
+    ctx.fillRect(191.3, 84, 12, 24);
+    ctx.fillRect(31.5, 84, 12, 30);
+    ctx.fillRect(227, 84, 12, 30);
+  
+     // Dibuja una línea diagonal
+     ctx.beginPath();
+     ctx.moveTo(34, 112); // Punto de inicio (x, y)
+     ctx.lineTo(78, 122); // Punto final (x, y)
+     ctx.strokeStyle = '#15aabf'; // Color de la línea (rojo en este caso)
+     ctx.lineWidth = 5; // Grosor de la línea
+     ctx.stroke(); // Dibuja la línea
+  
+     ctx.beginPath();
+     ctx.moveTo(237, 112); // Punto de inicio (x, y)
+     ctx.lineTo(191, 122); // Punto final (x, y)
+     ctx.strokeStyle = '#15aabf'; // Color de la línea (rojo en este caso)
+     ctx.lineWidth = 5; // Grosor de la línea
+     ctx.stroke(); // Dibuja la línea
+     // #495057
+</script>
+</body>
+</html>
